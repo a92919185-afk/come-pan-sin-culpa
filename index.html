@@ -34,7 +34,7 @@
     <!-- Promo Bar -->
     <div class="promo-bar">
         <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-        <span>Oferta Especial · Tiempo Limitado · Puede cerrarse en cualquier momento</span>
+        <span>Oferta Especial · Esta página se cierra en: <strong id="promo-countdown">09:59</strong></span>
     </div>
 
     <!-- Navigation -->
@@ -668,6 +668,22 @@
             updateCarousel();
             window.addEventListener('resize', updateCarousel);
         }
+    </script>
+    <script>
+        (function() {
+            var secs = 10 * 60 - 1;
+            var el = document.getElementById('promo-countdown');
+            if (!el) return;
+            function tick() {
+                if (secs < 0) secs = 10 * 60 - 1;
+                var m = Math.floor(secs / 60);
+                var s = secs % 60;
+                el.textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+                secs--;
+            }
+            tick();
+            setInterval(tick, 1000);
+        })();
     </script>
 </body>
 </html>
