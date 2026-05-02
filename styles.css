@@ -300,6 +300,14 @@ h1, h2, h3, h4 {
   display: block;
 }
 
+/* Hero image visibility control */
+.hero-img-mobile { display: block; }
+.hero-img-desktop { display: none; }
+@media (min-width: 900px) {
+  .hero-img-mobile { display: none; }
+  .hero-img-desktop { display: block; }
+}
+
 .hero-trust-row {
   display: flex;
   flex-wrap: wrap;
