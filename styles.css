@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
   --bg-oat: #F6F5F2;
@@ -8,7 +8,7 @@
   --accent-sage: #8A9A86;
   --danger-crimson: #992828;
   
-  --font-serif: 'Cormorant Garamond', serif;
+  --font-serif: 'Merriweather', serif;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   
   --radius-xl: 32px;
@@ -326,10 +326,10 @@ h1, h2, h3, h4 {
 .hero-trust-row svg { color: var(--accent-sage); flex-shrink: 0; }
 
 .hero-text h1 {
-  font-size: clamp(38px, 9vw, 84px); 
+  font-size: clamp(32px, 7vw, 68px); 
   color: var(--ink-charcoal);
   margin-bottom: 24px;
-  line-height: 1.05;
+  line-height: 1.1;
 }
 .hero-text h1 .gold-italic {
   display: block;
