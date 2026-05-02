@@ -748,7 +748,13 @@ h1, h2, h3, h4 {
 .carousel-btn.next { right: -10px; }
 
 @media (max-width: 767px) {
-  .testi-track-wrapper { margin: 0; }
+  .testi-track-wrapper { 
+    margin: 0;
+    overflow: visible;
+  }
+  .testi-track {
+    flex-direction: column;
+  }
   .carousel-btn { display: none; }
 }
 
