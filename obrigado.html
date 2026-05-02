@@ -259,28 +259,7 @@
             margin-bottom: 12px;
         }
 
-        /* Footer */
-        .ty-footer {
-            background: var(--ink-charcoal);
-            color: rgba(255,255,255,0.45);
-            text-align: center;
-            padding: 36px 16px;
-            font-size: 12px;
-            line-height: 1.8;
-        }
-        .ty-footer a {
-            color: rgba(255,255,255,0.45);
-            text-decoration: underline;
-        }
-        .ty-footer a:hover { color: rgba(255,255,255,0.7); }
-        .ty-footer .footer-lock {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            margin-top: 14px;
-            font-size: 11px;
-        }
+
     </style>
 </head>
 <body>
@@ -423,17 +402,96 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="ty-footer">
-        <p>¿Tienes alguna duda? Escríbenos a <a href="mailto:soporte@tudominio.com">soporte@tudominio.com</a><br>Responderemos en menos de 24 horas.</p>
-        <p style="margin-top:12px;">© 2026 — Come Pan Sin Culpa · Todos los derechos reservados</p>
-        <div class="footer-lock">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-            Tus datos están protegidos &nbsp;·&nbsp;
-            <a href="#">Política de Privacidad</a> &nbsp;·&nbsp;
-            <a href="#">Términos de Uso</a>
+    <!-- Footer (same as main landing page) -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h5>Sobre Nosotros</h5>
+                <p>Come Pan Saludable LTDA<br>
+                Corporativo Reforma 222, Piso 4<br>
+                CDMX, México, CP 06600<br>
+                Soporte: +52 55 1234 5678<br>
+                Email: soporte@comepansinculpa.com</p>
+                <p style="margin-top:24px; opacity: 0.7;">&copy; 2026 Todos los derechos reservados.</p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Renuncia de Responsabilidad Médica</h5>
+                <p style="opacity: 0.7; line-height: 1.5;">La información provista en este ebook y sitio web tiene un propósito puramente educativo e informativo. No sustituye el consejo, diagnóstico o tratamiento médico profesional. Siempre busque el consejo de su médico u otro proveedor de salud calificado con cualquier pregunta que pueda tener sobre una condición médica o cambios en su dieta.</p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Políticas y Privacidad</h5>
+                <ul class="footer-links">
+                    <li><a onclick="openModal('terms')">Términos de Servicio</a></li>
+                    <li><a onclick="openModal('privacy')">Aviso de Privacidad</a></li>
+                    <li><a onclick="openModal('cookies')">Política de Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="fb-disclaimer">
+            Este sitio NO es parte del sitio web de Meta / Facebook o Facebook Inc. Además, este sitio NO está respaldado de ninguna manera por Facebook. FACEBOOK es una marca registrada de FACEBOOK, Inc.
         </div>
     </footer>
+
+    <!-- Modals for compliance (same as main page) -->
+    <div class="modal-overlay" id="complianceModal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModalEl()" aria-label="Cerrar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <template id="text-terms">
+        <h2>Términos de Servicio</h2>
+        <p><strong>1. Aceptación de los Términos</strong><br>Al acceder o utilizar nuestro sitio web, productos ("Ebook Come Pan Sin Culpa") o servicios, usted acepta estar sujeto a estos Términos de Servicio. Si no está de acuerdo con todas las condiciones, por favor no utilice este sitio.</p>
+        <p><strong>2. Uso del Contenido</strong><br>Todo el contenido en este sitio, incluyendo pero no limitándose a recetas, guías, textos e imágenes, es propiedad de Come Pan Saludable LTDA. Está prohibida la reventa, distribución no autorizada o copia del producto digital adquirido. La licencia del material es para uso estrictamente personal.</p>
+        <p><strong>3. Resultados y Descargo de Responsabilidad</strong><br>Los resultados compartidos por terceros en testimonios no garantizan que todas las personas experimenten lo mismo. Los niveles de glucosa dependen de múltiples variables. Recomendamos medir siempre sus niveles antes y después de integrar alimentos nuevos.</p>
+        <p><strong>4. Garantía de Devolución</strong><br>Ofrecemos una garantía de satisfacción de 7 días. Las solicitudes de reembolso deben realizarse dentro de los 7 días naturales posteriores a la compra enviando un correo a soporte@comepansinculpa.com.</p>
+        <p><strong>5. Modificaciones</strong><br>Nos reservamos el derecho de modificar estos términos en cualquier momento. Su uso continuado del sitio tras los cambios implica la aceptación de estos.</p>
+    </template>
+
+    <template id="text-privacy">
+        <h2>Aviso de Privacidad</h2>
+        <p>En Come Pan Saludable LTDA nos tomamos la privacidad muy en serio. Esta política explica cómo recopilamos y usamos su información.</p>
+        <p><strong>1. Identidad y domicilio del Responsable</strong><br>Come Pan Saludable LTDA, con sede en Corporativo Reforma 222, CDMX, México, es el responsable del tratamiento de los datos personales que nos proporcione.</p>
+        <p><strong>2. Datos que recopilamos</strong><br>Recabamos únicamente la información necesaria para procesar la venta y entrega del producto digital: Nombre, correo electrónico y datos de pago (los cuales son cifrados y manejados a través de pasarelas seguras; nosotros no almacenamos números de tarjetas de crédito).</p>
+        <p><strong>3. Finalidad del tratamiento</strong><br>Sus datos se utilizarán exclusiva y estrictamente para facilitarle el acceso a la plataforma o envío del PDF, atender requerimientos de soporte técnico y, en caso de que lo acepte adicionalmente, enviar comunicaciones sobre promociones relacionadas de la misma temática.</p>
+        <p><strong>4. Protección de Datos</strong><br>Mantenemos estrictas medidas de seguridad administrativas y electrónicas para prevenir el acceso no autorizado, la alteración o el robo de sus datos.</p>
+        <p><strong>5. Derechos ARCO</strong><br>Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al uso de sus datos en cualquier momento enviando un email a nuestro soporte técnico con la solicitud.</p>
+    </template>
+
+    <template id="text-cookies">
+        <h2>Política de Cookies</h2>
+        <p>Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia del usuario y realizar métricas analíticas y publicitarias (como el Píxel de Meta).</p>
+        <p><strong>1. ¿Qué son las cookies?</strong><br>Las cookies son pequeños archivos de texto que se descargan en el dispositivo del usuario al visitar una página web. Permiten a la página recordar las preferencias de navegación y optimizar la experiencia.</p>
+        <p><strong>2. Tipos de Cookies que utilizamos</strong><br>
+        - Estrictamente necesarias: Para que el sitio funcione correctamente.<br>
+        - Analíticas (Google Analytics): Para comprender cómo los usuarios interactúan con nuestro sitio.<br>
+        - Publicitarias (Píxel de Meta/Facebook): Nos permiten medir el comportamiento y ofrecer anuncios relevantes. Sujeto a las políticas de Meta Platforms Inc.</p>
+        <p><strong>3. ¿Cómo deshabilitar las cookies?</strong><br>Puede restringir, bloquear o borrar las cookies de nuestro sitio o cualquier otra página utilizando su navegador de internet. En cada navegador, la operativa es diferente; consulte la función "Ayuda" de su navegador específico (Chrome, Safari, Firefox, Edge).</p>
+    </template>
+
+    <script>
+        const modal = document.getElementById('complianceModal');
+        const modalContent = document.getElementById('modalContent');
+
+        function openModal(type) {
+            modalContent.innerHTML = document.getElementById('text-' + type).innerHTML;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(e) {
+            if (e.target === modal) closeModalEl();
+        }
+        function closeModalEl() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
 
 </body>
 </html>
