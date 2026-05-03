@@ -272,15 +272,10 @@
                 <div class="savings-tag">Ahorras $27.10 hoy</div>
             </div>
 
-            <div class="cta-center">
-                <a href="#" onclick="document.getElementById('kiwify-upsell-trigger-FiAdGBM').click(); return false;" class="btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    SÍ, QUIERO LA GUÍA COMPLETA
-                </a>
-                <span class="decline-link" onclick="document.getElementById('kiwify-upsell-cancel-trigger-FiAdGBM').click();">
-                    No, prefiero quedarme sin el plan completo
-                </span>
-            </div>
+            <div style="text-align:center" id="kiwify-upsell-FiAdGBM" data-upsell-url="https://come-pan-sin-culpa.vercel.app/upsell2.html" data-downsell-url="https://come-pan-sin-culpa.vercel.app/downsell1.html">
+              <button id="kiwify-upsell-trigger-FiAdGBM" style="background-color:#1FBC9C;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #1FBC9C;font-size:20px;">¡Sí! Quiero la Guía Completa para comer sin culpa</button>
+              <div id="kiwify-upsell-cancel-trigger-FiAdGBM" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">No, prefiero seguir solo con el plan básico</div>
+            </div><script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
         </div>
     </section>
 
@@ -450,12 +445,7 @@
         </span>
     </footer>
 
-    <!-- Kiwify Integration -->
-    <div style="display:none;" id="kiwify-upsell-FiAdGBM" data-upsell-url="https://come-pan-sin-culpa.vercel.app/upsell2.html" data-downsell-url="https://come-pan-sin-culpa.vercel.app/downsell1.html">
-        <button id="kiwify-upsell-trigger-FiAdGBM">yes</button>
-        <div id="kiwify-upsell-cancel-trigger-FiAdGBM">no</div>
-    </div>
-    <script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+
 
     <script>
         (function () {
