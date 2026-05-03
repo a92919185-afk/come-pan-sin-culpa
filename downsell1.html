@@ -256,15 +256,10 @@
                 <p>Esta es la oferta más baja que existe. No habrá otro precio menor.</p>
             </div>
 
-            <div class="cta-center">
-                <a href="https://pay.kiwify.com/PLACEHOLDER_DS1" class="btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    SÍ, QUIERO EMPEZAR POR $9.90
-                </a>
-                <a href="#" class="decline-link" onclick="return false;">
-                    No gracias, no quiero aprovechar esta oferta
-                </a>
-            </div>
+            <div style="text-align:center" id="kiwify-upsell-GjEdBRq" data-upsell-url="https://come-pan-sin-culpa.vercel.app/obrigado.html" data-downsell-url="https://come-pan-sin-culpa.vercel.app/obrigado.html">
+              <button id="kiwify-upsell-trigger-GjEdBRq" style="background-color:#1FBC9C;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #1FBC9C;font-size:20px;">¡Sí! Quiero - Arranque 30 Días Sin Culpa!</button>
+              <div id="kiwify-upsell-cancel-trigger-GjEdBRq" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">No, prefiero seguir solo con el plan básico</div>
+            </div><script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
         </div>
     </section>
 
@@ -358,14 +353,9 @@
                 <div class="price-now"><sup>$</sup>9<sub>.90</sub></div>
                 <div class="price-label">Acceso inmediato · Pago único · Sin mensualidad</div>
             </div>
-            <div class="cta-center">
-                <a href="https://pay.kiwify.com/PLACEHOLDER_DS1" class="btn-primary">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    SÍ, QUIERO EMPEZAR POR $9.90
-                </a>
-                <a href="#" class="decline-link" onclick="return false;">
-                    No gracias, no quiero aprovechar esta oferta
-                </a>
+            <div style="text-align:center">
+              <button onclick="document.getElementById('kiwify-upsell-trigger-GjEdBRq').click()" style="background-color:#1FBC9C;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #1FBC9C;font-size:20px;">¡Sí! Quiero - Arranque 30 Días Sin Culpa!</button>
+              <div onclick="document.getElementById('kiwify-upsell-cancel-trigger-GjEdBRq').click()" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">No, prefiero seguir solo con el plan básico</div>
             </div>
         </div>
     </section>
